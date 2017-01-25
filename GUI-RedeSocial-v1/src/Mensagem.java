@@ -70,14 +70,17 @@ public abstract class Mensagem
     }
 
     /**
-     * Retorna a mensagem formatada para aparecer no Feed de
-     * Noticias. Inclui ha quanto tempo a mensagem foi publicada.
+     * Retorna a mensagem formatada para aparecer no Feed de Noticias. Inclui ha 
+     * quanto tempo a mensagem foi publicada.
+     * IMPORTANTE: geralmente não se retorna texto formato para usar interfaces
+     *             gráficas. São retornados os próprios objetos.
      * 
      * @return A mensagem formada para o Feed
      */
     public String getTextoExibicao() {
         String texto = "  [" + id + "]   " + autor + ": " + getConteudoTextoExibicao();
-        texto += "\n" + exibirTempo() + " - " + nroCurtidas + " pessoas curtiram isso!";
+        texto += "\n\t" + getTextoTempo();
+        texto += "\n\t" + nroCurtidas + " pessoas curtiram isso!";
         texto += "\n" + getTextoComentarios();
         
         return texto;
@@ -89,7 +92,7 @@ public abstract class Mensagem
      * 
      * @return Texto com a informacao formatada
      */
-    private String exibirTempo() {
+    private String getTextoTempo() {
         long tempoAtual = System.currentTimeMillis();
         long diferenca = (tempoAtual - horaPostagem);
 
@@ -97,10 +100,10 @@ public abstract class Mensagem
         long diferencaMin = diferencaSeg/60;
 
         if (diferencaMin < 1) {
-                return "\tHa " + diferencaSeg + " segundos atras";
+                return "Há " + diferencaSeg + " segundos";
         }
         else {
-                return "\tHa " + diferencaMin + " minutos atras";
+                return "Há " + diferencaMin + " minutos";
         }
     }
 

@@ -1,4 +1,5 @@
 
+import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.awt.HeadlessException;
 import java.awt.event.ActionEvent;
@@ -7,6 +8,7 @@ import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.plaf.basic.BasicArrowButton;
 
@@ -96,12 +98,20 @@ public class TelaRedeSocial {
      */
     private void montarJanela() {
         janela.setSize(500, 600);
-        janela.setLayout(new BoxLayout(janela.getContentPane(), BoxLayout.Y_AXIS));
+        // Para mais detalhes sobre o BorderLayout acesse:
+        // https://docs.oracle.com/javase/tutorial/uiswing/layout/border.html
+        janela.setLayout(new BorderLayout());
         
-        janela.add(areaTextoFeed);
-        janela.add(botaoPostarMensagem);
-        janela.add(botaoCurtir);
-        janela.add(botaoComentar);
+        janela.add(areaTextoFeed, BorderLayout.CENTER);
+        
+        JPanel painelBotoes = new JPanel();
+        painelBotoes.setLayout(new FlowLayout());
+        painelBotoes.add(botaoPostarMensagem);
+        painelBotoes.add(botaoCurtir);
+        painelBotoes.add(botaoComentar);
+        janela.add(painelBotoes, BorderLayout.SOUTH);
+        
+        
     }
     
     /*

@@ -51,7 +51,9 @@ public class FeedNoticias {
 
     /**
      * Metodo de obtenção do conteúdo do Feed de Noticiais. Percorre a lista de 
-     * mensagens e monta uma string com os textos de exibição de cada mensagem
+     * mensagens e monta uma string com os textos de exibição de cada mensagem.
+     * IMPORTANTE: geralmente não se retorna texto formato para usar interfaces
+     *             gráficas. São retornados os próprios objetos.
      * 
      * @return O conteúdo do feed
      */
