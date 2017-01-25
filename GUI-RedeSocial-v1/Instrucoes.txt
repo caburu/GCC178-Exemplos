@@ -72,10 +72,12 @@ queira usar os dados disponíveis da exceção para montar sua própria mensagem
 
 Crie então um classe MensagemNaoEncontradaException que herda da classe 
 RuntimeException. A classe deverá ter como atributo o identificador da mensagem.
-Faça então com que seja lançada uma exceção dessa classe.
+Obs: Veja que a mensagem da exceção pode ser definida dentro da classe. Dessa 
+forma, ao usá-la para lançarmos uma exceção não precisamos nos preocupar com isso.
 
-Veja que a mensagem da exceção pode ser definida dentro da classe. Dessa forma,
-ao usá-la para lançarmos uma exceção não precisamos nos preocupar com isso.
+Faça com que seja lançada uma exceção dessa classe. Altere a classe da Tela para
+que capture uma exceção desse tipo e defina sua própria mensagem para o usuário
+buscando o id da mensagem a partir do objeto da exceção.
 
 Exercício 8:
 

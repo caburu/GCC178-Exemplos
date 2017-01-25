@@ -7,8 +7,8 @@
 <!-- the Compile on Save feature is turned off for the project. -->
 <!-- You can turn off the Compile on Save (or Deploy on Save) setting -->
 <!-- in the project's Project Properties dialog box.-->
-<project name="GCC178_-_Parte_09_-_Rede_Social_v1" default="default" basedir=".">
-    <description>Builds, tests, and runs the project GCC178 - Parte 09 - Rede Social v1.</description>
+<project name="GUI-RedeSocial-v1" default="default" basedir=".">
+    <description>Builds, tests, and runs the project GUI-RedeSocial-v1.</description>
     <import file="nbproject/build-impl.xml"/>
     <!--
 
@@ -58,7 +58,7 @@
 
     An example of overriding the target for project execution could look like this:
 
-        <target name="run" depends="GCC178_-_Parte_09_-_Rede_Social_v1-impl.jar">
+        <target name="run" depends="GUI-RedeSocial-v1-impl.jar">
             <exec dir="bin" executable="launcher.exe">
                 <arg file="${dist.jar}"/>
             </exec>
