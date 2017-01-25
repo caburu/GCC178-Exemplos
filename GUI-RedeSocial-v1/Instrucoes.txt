@@ -24,13 +24,13 @@ ocorre um erro na aplicação.
 O que poderia ser feito para evitar este tipo de problema?
 O método no Feed de Notícias poderia alterar seu tipo de retorno, por exemplo?
 
--> Veja os slides sobre Tratamento de Exceções até o slide 12 para implementar
+-> Veja os slides sobre Tratamento de Exceções até o slide 13 para implementar
 a resposta.
 
 Exercício 4:
 
--> Veja no slide 13 que essa solução não é completa.
--> Veja até o slide 19 o funcionamento do lançamento e captura de exceções.
+-> Veja no slide 14 que essa solução não é completa.
+-> Veja até o slide 20 o funcionamento do lançamento e captura de exceções.
 
 4.1)
 Altere então o método que trata as curtidas no Feed de Notícias para que ele
@@ -47,7 +47,7 @@ exibir uma mensagem).
 
 Exercício 5:
 
--> Veja nos slides 21 a 25 que o ideal é nos recuperarmos de uma exceção.
+-> Veja nos slides 22 a 26 que o ideal é nos recuperarmos de uma exceção.
 
 Como podemos nos recuperar da exceção em nosso caso? Poderíamos pedir para o
 usuário que informasse o identificador da mensagem novamente, certo?
@@ -68,7 +68,7 @@ A mensagem do lançamento da exceção é escrita para o programador e nem sempr
 faz sentido para o usuário. Dessa forma, pode ser que que capture a exceção
 queira usar os dados disponíveis da exceção para montar sua própria mensagem.
 
--> Veja nos slides 26 a 28 que podemos criar nossa própria classe de Exceção.
+-> Veja nos slides 27 a 29 que podemos criar nossa própria classe de Exceção.
 
 Crie então um classe MensagemNaoEncontradaException que herda da classe 
 RuntimeException. A classe deverá ter como atributo o identificador da mensagem.
@@ -83,7 +83,7 @@ Repare que quando lançamos uma exceção não quer dizer necessariamente que qu
 usar nosso método vai tratá-la. Em alguns casos, podemos forçar que quem use
 nosso método se lembre de tratar a exceção.
 
--> Veja nos slides 28 a 34 que podemos criar Exceções Verificadas.
+-> Veja nos slides 30 a 35 que podemos criar Exceções Verificadas.
 
 Primeiro apenas altere a classe MensagemNaoEncontradaException para ser uma 
 exceção verificada e compile o projeto pra ver o que acontece.
@@ -92,7 +92,7 @@ Faça agora então os devidos tratamentos.
 
 Exercício 9:
 
--> Veja nos slides 35 e 36 que podemos tratar exceções diferentes no bloco
+-> Veja nos slides 36 e 37 que podemos tratar exceções diferentes no bloco
 catch.
 
 9.1)
@@ -110,4 +110,4 @@ Curtir da classe Mensagem uma divisão por zero qualquer. Isso terá um efeito d
 provocar uma exceção que não é do tipo MensagemNaoEncontradaException. Dessa
 forma, o tratamento deverá cair no caso geral de apenas mostrar a mensagem de erro.
 
--> A título de informação veja os slides 37 e 38 sobre o bloco finally.
+-> A título de informação veja os slides 38 e 39 sobre o bloco finally.
