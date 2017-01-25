@@ -1,0 +1,113 @@
+OBSERVAÇÕES GERAIS
+
+Essa é a sequência de atividades para a aula prática de GUI e Tratamento de
+Exceções.
+
+Você vai precisar desse projeto e dos slides "Parte 11b - GUI e Tratamento de Exceções"
+
+ATIVIDADES
+
+Exercício 1:
+
+O botão "Comentar" não está fazendo nada. Faça as implementações necessárias para
+que ele passe a funcionar (veja o botão "Curtir" como um exemplo).
+
+Exercício 2:
+
+Acrescente um botão "Atualizar" que atualiza o Feed de Notícias.
+
+Exercício 3:
+
+O botão "Curtir" e o botão "Comentar" pedem para o usuário o identificador da
+mensagem. Mas se o usuário passar um identificador de uma mensagem que não existe
+ocorre um erro na aplicação.
+O que poderia ser feito para evitar este tipo de problema?
+O método no Feed de Notícias poderia alterar seu tipo de retorno, por exemplo?
+
+-> Veja os slides sobre Tratamento de Exceções até o slide 12 para implementar
+a resposta.
+
+Exercício 4:
+
+-> Veja no slide 13 que essa solução não é completa.
+-> Veja até o slide 19 o funcionamento do lançamento e captura de exceções.
+
+4.1)
+Altere então o método que trata as curtidas no Feed de Notícias para que ele
+lance uma exceção caso o identificador da mensagem não exista (use exceção do
+tipo RuntimeException).
+
+Teste sua aplicação sem ainda tratar a exceção. Veja que o erro que aparece é 
+da mensagem que você gerou.
+
+4.2)
+Agora faça o tratamento de exceção na classe da Tela. Por enquanto, apenas exiba
+a mensagem de erro para o usuário (você pode usar a classe JOptionPane para 
+exibir uma mensagem).
+
+Exercício 5:
+
+-> Veja nos slides 21 a 25 que o ideal é nos recuperarmos de uma exceção.
+
+Como podemos nos recuperar da exceção em nosso caso? Poderíamos pedir para o
+usuário que informasse o identificador da mensagem novamente, certo?
+
+Altere então o código de forma que o programa continue pedindo o identificador
+para o usuário até ele digitar um identificador válido.
+
+Exercício 6:
+
+Depois da alteração anterior, o que acontece com seu programa caso não exista
+nenhuma mensagem? Caso não tenha tratado isso, faça o tratamento agora.
+
+Exercício 7:
+
+Do jeito que fizemos até agora está sendo retornada apenas uma mensagem de erro.
+Mas pode ser que queiramos exibir uma mensagem mais amigável para o usuário.
+A mensagem do lançamento da exceção é escrita para o programador e nem sempre
+faz sentido para o usuário. Dessa forma, pode ser que que capture a exceção
+queira usar os dados disponíveis da exceção para montar sua própria mensagem.
+
+-> Veja nos slides 26 a 28 que podemos criar nossa própria classe de Exceção.
+
+Crie então um classe MensagemNaoEncontradaException que herda da classe 
+RuntimeException. A classe deverá ter como atributo o identificador da mensagem.
+Faça então com que seja lançada uma exceção dessa classe.
+
+Veja que a mensagem da exceção pode ser definida dentro da classe. Dessa forma,
+ao usá-la para lançarmos uma exceção não precisamos nos preocupar com isso.
+
+Exercício 8:
+
+Repare que quando lançamos uma exceção não quer dizer necessariamente que quem
+usar nosso método vai tratá-la. Em alguns casos, podemos forçar que quem use
+nosso método se lembre de tratar a exceção.
+
+-> Veja nos slides 28 a 34 que podemos criar Exceções Verificadas.
+
+Primeiro apenas altere a classe MensagemNaoEncontradaException para ser uma 
+exceção verificada e compile o projeto pra ver o que acontece.
+
+Faça agora então os devidos tratamentos.
+
+Exercício 9:
+
+-> Veja nos slides 35 e 36 que podemos tratar exceções diferentes no bloco
+catch.
+
+9.1)
+Altere o tratamento da exceção na classe de Tela para que o que fizemos o
+tratamento funcione apenas caso seja uma exceção do tipo que lançamos. Acrescente
+um tratamento genérico (Exception) que apenas mostra a mensagem de erro para
+os demais casos.
+
+Execute o programa para confirmar que do ponto de vista do 
+usuário nada mudou (teste com identificadores válidos e inválidos).
+
+9.2)
+Apenas como forma de testar nossa última alteração, acrescente dentro do método
+Curtir da classe Mensagem uma divisão por zero qualquer. Isso terá um efeito de
+provocar uma exceção que não é do tipo MensagemNaoEncontradaException. Dessa
+forma, o tratamento deverá cair no caso geral de apenas mostrar a mensagem de erro.
+
+-> A título de informação veja os slides 37 e 38 sobre o bloco finally.

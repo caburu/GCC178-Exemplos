@@ -83,14 +83,6 @@ public class TelaRedeSocial {
                 curtirMensagem();
             }
         });
-        
-        // adiciona o método que tratará o evento de clique no botão Comentar
-        botaoComentar.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                comentarMensagem();
-            }
-        });
     }
 
     /**
@@ -140,19 +132,7 @@ public class TelaRedeSocial {
         int idMensagem = Integer.parseInt(JOptionPane.showInputDialog("Id da mensagem"));
         feed.curtir(idMensagem);
         atualizarAreaTextoFeed();
-    }
-    
-    /**
-     * Comenta uma mensagem. Solicita o identificador da mensagem e o comentário
-     * ao usuário, comenta a mensagem e atualiza a área de texto de exibição do 
-     * feed.
-     */
-    private void comentarMensagem() {
-        int idMensagem = Integer.parseInt(JOptionPane.showInputDialog("Id da mensagem"));
-        String comentario = JOptionPane.showInputDialog("Comentario da mensagem"); 
-        feed.comentar(idMensagem, comentario);
-        atualizarAreaTextoFeed();
-    }     
+    }    
 
     /**
      * Atauliza a área de texto de exibição do Feed.
