@@ -21,6 +21,7 @@ public class MensagemFoto extends Mensagem {
      * da foto e legenda da foto.
      * 
      * @param autor Nome do autor da mensagem
+     * @param id Identificador da mensagem
      * @param arquivoFoto Nome do arquivo da foto
      * @param legenda Legenda da foto
      */
@@ -33,6 +34,8 @@ public class MensagemFoto extends Mensagem {
     @Override
     /**
      * Retorna o conteúdo da mensagem (nesse caso o nome e a legenda da foto)
+     * 
+     * @return O conteúdo da mensagem
     */
     protected String getConteudoTextoExibicao() {
         return arquivoFoto + "\n" + legenda;

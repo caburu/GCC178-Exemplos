@@ -32,7 +32,7 @@ public class TelaRedeSocial {
     // Objeto que representa a Regra de Negócios (a lógica da Rede Social em si)
     private FeedNoticias feed;
     
-    /*
+    /**
      * Construtor da classe: cria o feed, os componentes e monta a tela.
     */
     public TelaRedeSocial() {
@@ -41,13 +41,11 @@ public class TelaRedeSocial {
         construirJanela();
     }
 
-    /*
+    /**
      * Constroi os componentes e monta a janela
     */
     private void construirJanela() throws HeadlessException {
         janela = new JFrame("GUI - Rede Social");
-        janela.setSize(500, 600);
-        janela.setLayout(new BoxLayout(janela.getContentPane(), BoxLayout.Y_AXIS));
         janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
         criarComponentes();
@@ -55,14 +53,20 @@ public class TelaRedeSocial {
         montarJanela();
     }
 
+    /**
+     * Cria os componentes da tela e faz a inscrição nos eventos necessários
+     */
     private void criarComponentes() {
+        // criando os componentes
         areaTextoFeed = new JTextArea("Feed de Notícias");
         botaoPostarMensagem = new JButton("Postar Mensagem");
         botaoCurtir = new JButton("Curtir");
         botaoComentar = new JButton("Comentar");
         
+        // impede que o usuário edite a área de texto do feed
         areaTextoFeed.setEditable(false);
         
+        // adiciona o método que tratará o evento de clique no botão Postar Mensagem
         botaoPostarMensagem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -70,6 +74,7 @@ public class TelaRedeSocial {
             }            
         });
         
+        // adiciona o método que tratará o evento de clique no botão Curtir
         botaoCurtir.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -77,6 +82,7 @@ public class TelaRedeSocial {
             }
         });
         
+        // adiciona o método que tratará o evento de clique no botão Comentar
         botaoComentar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -85,7 +91,13 @@ public class TelaRedeSocial {
         });
     }
 
+    /**
+     * Monta a janela
+     */
     private void montarJanela() {
+        janela.setSize(500, 600);
+        janela.setLayout(new BoxLayout(janela.getContentPane(), BoxLayout.Y_AXIS));
+        
         janela.add(areaTextoFeed);
         janela.add(botaoPostarMensagem);
         janela.add(botaoCurtir);
@@ -99,28 +111,43 @@ public class TelaRedeSocial {
         janela.setVisible(true);
     }
     
-    
+    /**
+     * Posta uma mensagem no feed. Solicita o autor e a mensagem ao usuário,
+     * posta no Feed e atualiza a área de texto de exibição do feed.
+     */
     private void postarMensagem() {
         String autor = JOptionPane.showInputDialog("Autor da mensagem");
         String mensagem = JOptionPane.showInputDialog("Texto da mensagem");        
         feed.postarMensagemTexto(autor, mensagem);        
-        atualizarFeed();
-    }    
-
-    private void atualizarFeed() {        
-        areaTextoFeed.setText(feed.getConteudo());
+        atualizarAreaTextoFeed();
     }
     
+    /**
+     * Curte uma mensagem. Solicita o identificador da mensagem ao usuário,
+     * curte a mensagem e atualiza a área de texto de exibição do feed.
+     */
     private void curtirMensagem() {
         int idMensagem = Integer.parseInt(JOptionPane.showInputDialog("Id da mensagem"));
         feed.curtir(idMensagem);
-        atualizarFeed();
+        atualizarAreaTextoFeed();
     }
     
+    /**
+     * Comenta uma mensagem. Solicita o identificador da mensagem e o comentário
+     * ao usuário, comenta a mensagem e atualiza a área de texto de exibição do 
+     * feed.
+     */
     private void comentarMensagem() {
         int idMensagem = Integer.parseInt(JOptionPane.showInputDialog("Id da mensagem"));
         String comentario = JOptionPane.showInputDialog("Comentario da mensagem"); 
         feed.comentar(idMensagem, comentario);
-        atualizarFeed();
-    }    
+        atualizarAreaTextoFeed();
+    }     
+
+    /**
+     * Atauliza a área de texto de exibição do Feed.
+     */
+    private void atualizarAreaTextoFeed() {        
+        areaTextoFeed.setText(feed.getConteudo());
+    }   
 }
