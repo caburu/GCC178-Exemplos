@@ -1,0 +1,9 @@
+Student System 2.2
+(C) BLABLABLA SOFTWARE
+Exported on 2017-31-01 10:02:32
+Data
+1234;Fabiano;98
+4321;Claudia;60
+4444;Pedro;34
+548;Tiago;70
+End of data

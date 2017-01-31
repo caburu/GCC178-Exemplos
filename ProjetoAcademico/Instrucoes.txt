@@ -1,0 +1,90 @@
+OBSERVAÇÕES GERAIS
+
+Essa é a sequência de atividades para a aula prática de Arquivos e Serialização.
+
+Você vai precisar desse projeto e dos slides "GCC178 - Parte 12 - Arquivos e Serialização"
+
+ATIVIDADES
+
+Exercício 1:
+
+Acrescente uma opção para remover um aluno a partir da sua matrícula.
+
+Exercício 2: 
+
+Acrescente uma opção parar gerar um relatório em arquivo para impressão. Nessa
+opção o usuário poderá informar o nome do arquivo (sem a extensão) e o programa
+deverá gerar então arquivo com o nome informado pelo usuário e extensão 'txt'.
+
+No arquivo os dados devem ser gerados no formato do exemplo abaixo. Obs: os 
+espaços estão sendo mostrados como pontos para facilitar a identificação.
+
+..........RELATORIO DE NOTAS
+
+MATRICULA...NOME........NOTA
+1...........Maria.......99
+3...........Joao........77
+
+Media da Turma: 88
+
+..........gerado em: 31/10/2016 16:20 *** Obs: usar data/hora atual
+
+Exercício 3:
+
+Suponha que precisemos fazer uma integração entre sistemas. A Universidade possui
+dados de alunos de um outro sistema e eles foram exportados para um arquivo texto.
+Você deve então criar uma opção para importar os dados a partir desse arquivo.
+
+Deve ser solicitado ao usuário o nome do arquivo e um exemplo de formato está no
+arquivo 'export.txt' existente neste projeto.
+
+Obs: os dados importados devem ser acrescentados aos já existentes.
+
+Exercício 4:
+
+Suponha que agora seja necessário guardar o endereço do aluno. Para isso você
+deve criar uma classe para representar um endereço e ela deverá ter as seguintes
+informações: rua, cidade e CEP.
+
+Faça os tratamentos necessários para que o salvamento / carregamento dos dados
+dos alunos continue funcionando.
+
+Por fim, acrescente uma opção buscar dados, na qual o usuário informará um número
+de matrícula e os dados do aluno serão exibidos no formato a seguir:
+
+Matrícula: 1 Nome: Maria Nota: 100 Endereco: Rua Abc, 10 - Lavras - 37200000
+
+A importação de dados do exercício anterior continua funcionando?
+
+Exercício 5
+
+A Universidade agora solicitou que seu projeto gere o relatório em formato HTML
+para que possa ser aberto por outros usuários usando um navegador Web. Crie então
+uma nova opção de exportação do relatório em formato HTML e faça a implementação
+necessária.
+
+Dica: um arquivo HTML nada mais é que um arquivo texto com um determinado formato.
+Experimente criar um arquivo texto e colar nele o texto abaixo. Salve o arquivo
+com a extensão .HTML e clique duas vezes para abri-lo e veja o que acontece.
+Use esse exemplo como base para fazer o exercício.
+
+<html>
+    <head>
+        <title>Titulo da Pagina</title>
+    </head>
+
+    <body>
+        <p>Um paragrafo qualquer.</p>	
+	
+        <table>
+            <tr> <td> <b>Coluna 1</b></td> <td> <b>Coluna 2</b></td> </tr>
+            <tr> <td> Valor 1.1 </td> <td> Valor 1.2 </td> </tr>
+            <tr> <td> Valor 2.1 </td> <td> Valor 2.2 </td> </tr>
+        </table>
+
+        <p>Outro paragrafo qualquer.</p>
+
+    </body>
+</html>
+
+
