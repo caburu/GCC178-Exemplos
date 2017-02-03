@@ -6,11 +6,7 @@ Você vai precisar desse projeto e dos slides "GCC178 - Parte 12 - Arquivos e Se
 
 ATIVIDADES
 
-Exercício 1:
-
-Acrescente uma opção para remover um aluno a partir da sua matrícula.
-
-Exercício 2: 
+Exercício 1: 
 
 Acrescente uma opção parar gerar um relatório em arquivo para impressão. Nessa
 opção o usuário poderá informar o nome do arquivo (sem a extensão) e o programa
@@ -29,7 +25,7 @@ Media da Turma: 88
 
 ..........gerado em: 31/10/2016 16:20 *** Obs: usar data/hora atual
 
-Exercício 3:
+Exercício 2:
 
 Suponha que precisemos fazer uma integração entre sistemas. A Universidade possui
 dados de alunos de um outro sistema e eles foram exportados para um arquivo texto.
@@ -40,7 +36,7 @@ arquivo 'export.txt' existente neste projeto.
 
 Obs: os dados importados devem ser acrescentados aos já existentes.
 
-Exercício 4:
+Exercício 3:
 
 Suponha que agora seja necessário guardar o endereço do aluno. Para isso você
 deve criar uma classe para representar um endereço e ela deverá ter as seguintes
@@ -56,7 +52,7 @@ Matrícula: 1 Nome: Maria Nota: 100 Endereco: Rua Abc, 10 - Lavras - 37200000
 
 A importação de dados do exercício anterior continua funcionando?
 
-Exercício 5
+Exercício 4:
 
 A Universidade agora solicitou que seu projeto gere o relatório em formato HTML
 para que possa ser aberto por outros usuários usando um navegador Web. Crie então
