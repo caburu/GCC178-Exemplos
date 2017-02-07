@@ -1,0 +1,71 @@
+
+================ OBSERVAÇÕES GERAIS ====================================
+
+Essa é a sequência de atividades para a aula prática de "Persistencia"
+
+Você vai precisar desse projeto e dos slides "GCC178 - Parte 14 - Persistencia"
+
+
+================ PRÉ-REQUISITOS ========================================
+
+Você precisará ter instalado em seu computador o SQLITE e o driver dele 
+para JDBC; precisará também do "ProjetoAcademico" usado em aulas anteriores.
+
+- SQLITE: 
+Baixe a versão compatível com seu sistema de: http://www.sqlite.org/download.html
+
+- Driver SQLITE-JDBC:
+Baixe a versão atual de: http://bitbucket.org/xerial/sqlite-jdbc/downloads
+
+- ProjetoAcademico
+Você pode usar a sua última versão (que você alterou nas aulas anteriores)
+ou pode baixá-lo novamente: https://github.com/caburu/GCC178-Exemplos
+
+
+================ ATIVIDADES ============================================
+
+Exercício 1: 
+
+Estude o projeto TesteJDBC. Execute-o, verifique os resultados e confira
+no código. Lembre-se que ao executar novamente o programa você deve
+apagar o arquivo do banco de dados (obs: no uso normal, criamos o banco
+de dados apenas uma vez e não em toda a execução de um programa).
+
+Em seguida, nos métodos da classe TesteDB inclua instruções para imprimir
+os comandos executas (sql) para que consiga visualizar melhor como são
+esses comandos.
+
+Exercício 2:
+
+Vamos agora passar para o ProjetoAcademico. A primeira tarefa será criar
+uma classe para representar a camada de acesso a dados. Você deverá criar
+também os métodos para: conexão com o banco de dados e criação da tabela
+que guardará os dados dos alunos.
+
+Em seguida altere a classe principal do projeto de forma que o banco seja
+criado se for passado o argumento "-criarbd" para a execução do programa.
+Se nada for passado deve ser exibido o menu normalmente.
+
+Exercício 3:
+
+Crie na classe de acesso a dados um método para inserir um aluno no Banco
+de Dados. Altere o projeto para parar de guardar os dados em arquivo e 
+passar a guardar no banco de dados.
+
+Exercício 4:
+
+Crie na classe de acesos a dados um método para buscar os dados dos
+alunos do banco de dados. Altere o projeto para parar de buscar os dados
+de arquivo e passar a buscar do banco de dados.
+
+Teste suas implementações dos Exercício 3 e 4.
+
+Exercício 5:
+
+Crie na classe de acesso a dados um método para remover um aluno do
+banco de dados e faça os demais tratamento necessários para utilizá-lo.
+
+Exercício 6:
+
+Altere o projeto para que seja possível alterar a nota de um aluno e faça
+o tratamento necessário para que isso seja refletido no banco de dados.
