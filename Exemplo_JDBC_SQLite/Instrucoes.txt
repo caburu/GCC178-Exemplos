@@ -8,14 +8,12 @@ Você vai precisar desse projeto e dos slides "GCC178 - Parte 14 - Persistencia"
 
 ================ PRÉ-REQUISITOS ========================================
 
-Você precisará ter instalado em seu computador o SQLITE e o driver dele 
-para JDBC; precisará também do "ProjetoAcademico" usado em aulas anteriores.
-
-- SQLITE: 
-Baixe a versão compatível com seu sistema de: http://www.sqlite.org/download.html
+Você precisará ter em seu computador driver JDBC para SQLite e precisará também 
+do "ProjetoAcademico" usado em aulas anteriores.
 
 - Driver SQLITE-JDBC:
-Baixe a versão atual de: http://bitbucket.org/xerial/sqlite-jdbc/downloads
+Ele já está nos arquivos do projeto, mas se deseja baixe a versão mais atual em:
+http://bitbucket.org/xerial/sqlite-jdbc/downloads
 
 - ProjetoAcademico
 Você pode usar a sua última versão (que você alterou nas aulas anteriores)

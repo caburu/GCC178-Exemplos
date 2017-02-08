@@ -8,7 +8,6 @@ import java.util.ArrayList;
  * Classe para demonstrar a utilização do JDBC para conectar a um banco de dados.
  * Está sendo utilizado o banco de dados SQLite.
  * 
- * Download do SQLite: http://www.sqlite.org/download.html
  * Download do drive JDBC para SQLite: http://bitbucket.org/xerial/sqlite-jdbc/downloads
  *
  * @author julio
