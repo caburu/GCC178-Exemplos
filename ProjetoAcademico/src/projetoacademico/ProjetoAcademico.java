@@ -6,6 +6,7 @@ import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -24,10 +25,11 @@ public class ProjetoAcademico {
     private final String nomeArquivo = "alunos.dat";
 
     private int exibirMenu() {
-        System.out.println("1. Cadastrar aluno\n"
-                + "2. Exibir relatório\n"
-                + "3. Sair\n"
-                + "Escolha a opção desejada: ");
+        System.out.println("\n1. Cadastrar aluno\n" +
+                           "2. Remove aluno\n" +
+                           "3. Exibir relatório\n" +
+                           "4. Sair");
+        System.out.print("Escolha a opção desejada: ");
         return Teclado.lerInteiro(null);
     }
 
@@ -66,6 +68,25 @@ public class ProjetoAcademico {
         alunos.add(new Aluno(mat, nome, nota));
     }
 
+    private void removerAluno() {
+        int mat = Teclado.lerInteiro("Informe a matrícula do aluno: ");
+
+        boolean removeu = false;
+        Iterator<Aluno> iterador = alunos.iterator();        
+        while (iterador.hasNext() && !removeu) {
+            Aluno aluno = iterador.next();
+            
+            if (aluno.getMatricula() == mat) {
+                iterador.remove();
+                removeu = true;
+            }
+        }
+        
+        if (!removeu) {
+            System.out.println("Matricula " + mat + " não encontrada!");
+        }
+    }
+
     private void exibirRelatorio() {
         for (Aluno a : alunos) {
             System.out.printf("%-6d%-15s%-4.2f\n",
@@ -83,15 +104,18 @@ public class ProjetoAcademico {
                     cadastrarAluno();
                     break;
                 case 2:
-                    exibirRelatorio();
+                    removerAluno();
                     break;
                 case 3:
+                    exibirRelatorio();
+                    break;
+                case 4:
                     salvarDados();
                     break;
                 default:
                     System.out.println("Opção inválida! Tente novamente...");
             }
-        } while (op != 3);
+        } while (op != 4);
     }
 
     /**
