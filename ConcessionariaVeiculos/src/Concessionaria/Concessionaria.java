@@ -59,6 +59,7 @@ public class Concessionaria {
             carro.produzir();
             carro.pintar();
             carro.liberarDocumentacao();
+            carros.add(carro);
             return true;
         }
         else {
