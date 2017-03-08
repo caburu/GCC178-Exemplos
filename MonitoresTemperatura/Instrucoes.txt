@@ -1,0 +1,97 @@
+
+================ OBSERVAÇÕES GERAIS ====================================
+
+Essa é a sequência de atividades para a aula prática de "Padrões de Projeto - Parte 2"
+
+Você vai precisar desse projeto e dos slides "Parte 16 - Padrões de Projeto - Parte 2"
+
+================ ATIVIDADES ============================================
+
+EXERCÍCIO 1: 
+
+O programa MonitoresTemperatura mostra a tentativa do Tião de criar uma API 
+(pacote apiTemperatura) que poderia ser vendida para quem se interessasse em criar
+programas que usem os dados de temperaturas de algumas cidades.
+
+Tião criou também uma tela de exemplo (pacote telaExemplo) para demonstrar o uso
+de sua API e servir de código de exemplo para seus clientes.
+
+Execute a aplicação e veja como ela funciona (aguarde alguns segundos).
+
+Estude o projeto e veja que ele possui uma classe para representar um Termometro
+que simula atualizações de temperatura. Esse projeto faz uso de temporizadores
+(timers). Um timer permite que uma tarefa seja agendada para ser executada em
+algum horário ou a cada N milissegundos. Nesse projeto, a temperatura de cada
+termômetro é atualizada a cada certa quantidade de milissegundos.
+
+Veja também que a tela é atualizada sempre que um termômetro tem sua temperatura
+atualizada.
+
+Experimente então criar um novo termômetro para a cidade de Ribeirão Vermelho. Use
+como coordenadas os valores 30, 30 e como limites de temperatura -2 e 20.
+
+EXERCÍCIO 2:
+
+Suponha que Tião te forneceu a API dele e pediu que você testasse o seu
+funcionamento. Para isso, crie um novo pacote chamado "clienteCobaia" e crie nela
+uma tela que mostre:
+
+    Menor temperatura da Região: Lavras (8 º C)
+    Maior temperatura da Região: Ingaí (32 º C)
+
+E claro a tela deve ser atualizada automaticamente caso a menor e/ou a maior 
+temperaturas registradas sejam alteradas.
+
+EXERCÍCIO 3
+
+O que você achou das alterações que foram necessárias no exercício anterior?
+
+Supondo que a API foi fornecida pelo Tião e que apenas ele pode mexer no pacote
+apiTemperatura, você usou a API dele sem ele precisar alterá-la?
+
+Imagine como Tião poderá tratar todos os clientes que possam surgir para sua API?
+Além disso, como ficará o acoplamento do projeto uma vez que as classe do Tião
+precisam conhecer todos os clientes? Como um cliente poderá usar a API sem ter o
+código dos demais cliente?
+
+Vamos agora então usar a solução correta para esse tipo de situação.
+
+Implemente o Padrão de Projeto Observer na API do Tião e altere tanto a tela de
+exemplo como a tela que você criou para usarem o padrão. Faça com que os 
+observadores possam definir de qual local (cidade) eles querem receber 
+atualizações (obs: caso o cliente passe o local "todos" ele receberá de todos os 
+locais).
+
+Obs: lembre-se de retirar os imports das classes do API do Tião referentes às 
+classes de outros pacotes.
+
+Dica: veja o exemplo disponibilizado pelo prof. Paulo (especialmente as interfaces
+Observador e Observado).
+
+EXERCÍCIO 4:
+
+Agora é a prova de fogo. Suponha que o Tião disponibilizou a API dele e um 
+primeiro cliente se interessou por ela.
+
+Crie então a tela desse novo cliente em um pacote chamado "clienteReal". Esse 
+cliente deseja uma tela que mostre:
+
+    Escolha a cidade: | Lavras    |   |__MONITORAR___|
+      
+                28 ºC (* a temperatura em uma fonte bem grande)
+
+Ou seja, a tela tem uma caixa de texto para o usuário digitar o nome da cidade e
+ao clicar no botão "Monitorar" a temperatura da cidad escolhida deve passar a 
+ser atualizada automaticamente.
+
+Obs: faça o exercício sem alterar a API do Tião (caso precise alterá-la algo
+não ficou como deveria no exercício anterior).
+
+EXERCÍCIO 5:
+
+O que achou de como ficou a API do Tião?
+
+Agora é possível que ele tenha inúmeros clientes sem que precise de alteração em
+seu código. Além disso, o código ficou bem mais desacoplado uma vez que as 
+classes da API não precisam conhecer as classes que recebem as atualizações.
+

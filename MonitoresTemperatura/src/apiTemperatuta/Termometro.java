@@ -3,16 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package APITemperatura;
+package apiTemperatuta;
 
 import java.util.Random;
 import java.util.TimerTask;
+import telaExemplo.TelaMonitoramentoSimples;
 
 /**
  *
  * @author julio
  */
-public class TermometroSimulado extends TimerTask {    
+public class Termometro extends TimerTask {    
     private int temperaturaAtual;
     private String local;
     private int posicaoX;
@@ -22,14 +23,22 @@ public class TermometroSimulado extends TimerTask {
     private int temperaturaMaxima;
     private Random aleatorio;
     
-    public TermometroSimulado(String local, int posX, int posY, int tempMin, int tempMax) {
+    private TelaMonitoramentoSimples telaMS;
+    
+    public Termometro(String local, int posX, int posY, int tempMin, 
+                              int tempMax) {
         this.local = local;
         this.posicaoX = posX;
         this.posicaoY = posY;
         this.temperaturaMinima = tempMin;
         this.temperaturaMaxima = tempMax;
         this.temperaturaAtual = tempMin;
+        this.telaMS = null;
         aleatorio = new Random();
+    }
+    
+    public void definirTela(TelaMonitoramentoSimples telaMS) {
+        this.telaMS = telaMS;
     }
     
     public int obterTemperaturaAtual() {
@@ -52,5 +61,14 @@ public class TermometroSimulado extends TimerTask {
     public void run() {
         temperaturaAtual = 
                 aleatorio.nextInt((temperaturaMaxima - temperaturaMinima) + 1) + temperaturaMinima;
+        
+        if (telaMS != null) {
+            telaMS.atualizarTemperatura(local, temperaturaAtual);
+        }
+    }
+    
+    @Override
+    public String toString() {
+        return local + ": " + temperaturaAtual + " ºC";
     }
 }
