@@ -95,3 +95,19 @@ Agora é possível que ele tenha inúmeros clientes sem que precise de alteraç�
 seu código. Além disso, o código ficou bem mais desacoplado uma vez que as 
 classes da API não precisam conhecer as classes que recebem as atualizações.
 
+Vamos agora fazer algo mais bacana. Baixe o projeto "ExemploJFreeChart". Esse
+projeto tem uma aplicação que mostra como criar uma aplicação em Java que tem
+um gráfico de linhas usando a API JFreeChart (uma das mais usadas em Java para
+gráficos).
+
+Execute o programa e estude o código. Para que o código funcione são necessários
+os arquivos da API (.jar) que estão na pasta do projeto.
+
+Vamos supor então que um novo cliente quer agora usar a API do Tião para exibir
+um gráfico de temperaturas. Crie um novo pacote "segundoCliente" e nele crie
+crie uma tela com o gráfico de linha mostrando a temperatura de uma cidade.
+
+Obs: para simplificar você pode criar uma primeira tela no qual o usuário escolhe
+a cidade e coleta por um tempo os dados de temperatura (botões 'coletar' e 'parar').
+Depois, ao clicar em exibir gráfico chama a tela que mostra o gráfico de
+temperatura.
