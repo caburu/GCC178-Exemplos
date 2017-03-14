@@ -1,0 +1,59 @@
+
+================ OBSERVAÇÕES GERAIS ====================================
+
+Essa é a sequência de atividades para a aula prática de "Testes Unitários e Multitarefa"
+
+Você vai precisar desse projeto e dos slides "Parte 16 - Testes Unitários e Multitarefa"
+
+================ ATIVIDADES ============================================
+
+EXERCÍCIO 1:
+
+Como forma de exercitar o uso de aplicações Multitarefa vamos criar um programa
+uma corrida de atletas. Nesse programa podereremos definir o número de corredores
+e cada corredor terá uma velocidade diferente. Usaremos threads diferentes para
+cada corredor e mostraremos o andamento da corrida no terminal.
+
+Nesse primeiro exercício crie uma classe para representar um corredor. Um corredor
+tem um nome, uma velocidade (m/s), sua posicao atual (m) e a distância (m) a ser 
+percorrida (use valores inteiros). A classe corredor deverá ter métodos para obter 
+seus atributos, um método correr que aumenta a posicao atual em 1 unidade e um 
+método para dizer se o corredor já terminou a corrida.
+
+
+EXERCÍCIO 2:
+
+Antes de fazer a parte de programação multitarefa, vamos exercitar o conceito de
+Testes Unitários. Use o JUnit para criar casos testes que validem:
+a) que um corredor foi criado corretamente.
+b) que o método que correr funciona corretamente.
+c) que o método indica que a corrida terminou funciona corretamente.
+
+EXERCÍCIO 3:
+
+Vamos agora transformar nossa classe Corredor em uma classe que pode ser executada
+em Threads separadas. Para isso, faça com que ela implemente a interface Runnable.
+No método run faça com que o corredor corra até o final da corrida em um tempo
+condizente com sua velocidade. Exemplo se o corredor tem velocidade de 4 m/s o
+corredor deverá correr 4 vezes em 1 segundo.
+
+Sobrescreva o método toString da classe Corredor para exibir no seguinte formato:
+    Corredor <nome>: **********
+Onde <nome> é o nome do corredor e os asteriscos representam a posição atual dele.
+Assim se ele já correu 10 metros, devem aparecer 10 asteriscos. 
+
+Dica: o código abaixo cria uma string com o caractere "+" repetido 5 vezes:
+    new String(new char[5]).replace("\0", "+");   -->    "+++++"
+
+EXERCÍCIO 4:
+
+Crie uma classe Principal que pede ao usuário o número de corredores, a distância
+total a ser percorrida e a velocidade mínima e máxima dos corredores. Crie então
+uma lista de corredores e sorteie aleatoriamente a velocidade de cada um de acordo
+com os valores limite definidos pelo usuário.
+
+Crie uma Thread para cada corredor e as inicie. Em seguida, faça um código que, 
+enquanto durar a corrida, exiba todos os corredores a cada 50 ms.
+
+Teste seu programa e assista à corrida!
+
