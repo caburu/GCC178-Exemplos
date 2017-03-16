@@ -20,4 +20,4 @@ Projetos utilizados em 2016-02. Professores: [Júlio César Alves] e [Paulo Afon
 
 ### [Threads]
 
-[Threads em Java]: /ThreadsCorredores
+[Threads]: /ThreadsCorredores
