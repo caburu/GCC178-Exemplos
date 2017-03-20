@@ -1,8 +1,10 @@
-# Projetos de Exemplo da Disciplina GCC178 (DCC/UFLA)
+# Projetos usados nas aulas da Disciplina GCC178 (DCC/UFLA)
 
-Esse repositório contém os projetos de exemplo disponibilizados para os alunos da disciplina GCC178 - Práticas de Programação Orientada a Objetos, do [Departamento de Ciência da Computação] da [Universidade Federal de Lavras] (DCC/UFLA).
+Esse repositório contém os projetos de usados nas aulas de GCC178 - Práticas de Programação Orientada a Objetos, do [Departamento de Ciência da Computação] da [Universidade Federal de Lavras] (DCC/UFLA).
 
-Os projetos usam a linguagem [Java] e foram utilizados nas aulas práticas da disciplina, no período 2016-2.
+Existem projetos de exemplo disponibilizados geralmente nas aulas teóricas e projetos-base usados para exercícios nas aulas práticas (nesses casos geralmente há um arquivo 'instrucoes.txt' com os exercícios).
+
+Os projetos usam a linguagem [Java] e foram utilizados no período 2016-2.
 
 Professores: [Júlio César Alves] e [Paulo Afonso Parreira Júnior].
 
@@ -14,16 +16,48 @@ Professores: [Júlio César Alves] e [Paulo Afonso Parreira Júnior].
 
 ## Projetos disponíveis
 
-### [Banco de Dados]
+### Arquivos e Serialização
 
-[Banco de Dados]: /Exemplo_JDBC_SQLite
+* Projeto [ProjetoAcademico]
+
+[ProjetoAcademico]: /ProjetoAcademico
+
+### Banco de Dados
+
+* Projeto [Exemplo_JDBC_SQLite].
+
+[Exemplo_JDBC_SQLite]: /Exemplo_JDBC_SQLite
+
+### Interfaces Gráficas e Tratamento de Exceções
+
+* Projeto [GUI-RedeSocial-v1]
+
+[GUI-RedeSocial-v1]: /GUI-RedeSocial-v1
 
 ### Padrões de Projeto
 
-* [Abstract Factory] 
+* Abstract Factory: Projeto [ConcessionariaVeiculos]
+* Observer: Projeto [MonitoresTemperatura]
 
-[Abstract Factory]: /ConcessionariaVeiculos
+[ConcessionariaVeiculos]: /ConcessionariaVeiculos
+[MonitoresTemperatura]: /MonitoresTemperatura
 
-### [Programação multitarefa]
+### Polimorfismo
 
-[Programação multitarefa]: /ThreadsCorredores
+* Projeto [Polimorfismo - Veiculos v1]
+* Projeto [Polimorfismo-RedeSocial-v1]
+
+[Polimorfismo - Veiculos v1]: /Polimorfismo%20-%20Veiculos%20v1
+[Polimorfismo-RedeSocial-v1]: /Polimorfismo-RedeSocial-v1
+
+### Programação multitarefa
+
+* Projeto [ThreadsCorredores]
+
+[ThreadsCorredores]: /ThreadsCorredores
+
+### Outros
+
+* API para gráficos: projeto [ExemploJFreeChart]
+
+[ExemploJFreeChart]: /ExemploJFreeChart
