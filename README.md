@@ -11,7 +11,7 @@ Professores: [Júlio César Alves] e [Paulo Afonso Parreira Júnior].
 [Departamento de Ciência da Computação]: http://www.dcc.ufla.br
 [Universidade Federal de Lavras]: http://www.ufla.br
 [Java]: https://www.java.com
-[Júlio César Alves]: www.dcc.ufla.br/~jcalves
+[Júlio César Alves]: http://www.dcc.ufla.br/~jcalves
 [Paulo Afonso Parreira Júnior]: http://www.dcc.ufla.br/?page_id=91
 
 ## Projetos disponíveis
