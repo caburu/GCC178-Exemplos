@@ -28,6 +28,12 @@ Professores: [Júlio César Alves] e [Paulo Afonso Parreira Júnior].
 
 [Exemplo_JDBC_SQLite]: /Exemplo_JDBC_SQLite
 
+### Básico Orientação a Objetos
+
+* Jogo da Nave - Projeto [JogoNave].
+
+[JogoNave]: /JogoNave
+
 ### Interfaces Gráficas e Tratamento de Exceções
 
 * Projeto [GUI-RedeSocial-v1]
