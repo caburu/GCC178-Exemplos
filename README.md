@@ -22,6 +22,7 @@ Professores: [Júlio César Alves] e [Paulo Afonso Parreira Júnior].
 
 [ProjetoAcademico]: /ProjetoAcademico
 
+
 ### Banco de Dados
 
 * Projeto [Exemplo_JDBC_SQLite].
@@ -42,11 +43,17 @@ Professores: [Júlio César Alves] e [Paulo Afonso Parreira Júnior].
 
 ### Padrões de Projeto
 
-* Abstract Factory: Projeto [ConcessionariaVeiculos]
-* Observer: Projeto [MonitoresTemperatura]
+* Adapter: Projeto [PadraoAdapter]
+* Singleton: Projeto [PadraoSingleton]
+* Abstract Factory: Projeto [ConcessionariaVeiculos] e Projeto [AbstractFactory]
+* Observer: Projeto [MonitoresTemperatura] e Projeto [ProjetoTemCafeObserver]
 
 [ConcessionariaVeiculos]: /ConcessionariaVeiculos
 [MonitoresTemperatura]: /MonitoresTemperatura
+[AbstractFactory]: /Abstractfactory
+[ProjetoTemCafeObserver]: /ProjetoTemCafeObserver
+[PadraoSingleton]: /PadraoSingleton
+[PadraoAdapter]: /Adapter
 
 ### Polimorfismo
 
@@ -58,9 +65,23 @@ Professores: [Júlio César Alves] e [Paulo Afonso Parreira Júnior].
 
 ### Programação multitarefa
 
-* Projeto [ThreadsCorredores]
+* Projeto [ThreadsCorredores] e [Multitarefa]
 
 [ThreadsCorredores]: /ThreadsCorredores
+[Multitarefa]: /Multitarefa
+
+### Frameworks
+
+* Projeto [ProjetoTemCafe]
+
+[ProjetoTemCafe]: /ProjetoTemCafe
+
+### Testes automatizados
+
+* Projeto [TestesAutomatizados]
+
+[TestesAutomatizados]: /TestesAutomatizados
+
 
 ### Outros
 
