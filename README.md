@@ -22,7 +22,6 @@ Professores: [Júlio César Alves] e [Paulo Afonso Parreira Júnior].
 
 [ProjetoAcademico]: /ProjetoAcademico
 
-
 ### Banco de Dados
 
 * Projeto [Exemplo_JDBC_SQLite].
@@ -34,6 +33,14 @@ Professores: [Júlio César Alves] e [Paulo Afonso Parreira Júnior].
 * Jogo da Nave - Projeto [JogoNave].
 
 [JogoNave]: /JogoNave
+
+### Design de Classes (coesão, acoplamento, etc.)
+
+* Jogo World of Zull - Projeto [World of Zuul v1]. 
+Obs: essa é uma tradução de um projeto do [Livro do Barnes e Kolling]
+
+[World of Zuul v1]: /World%20of%20Zuul%20v1
+[Livro do Barnes e Kolling]: https://www.bluej.org/objects-first/
 
 ### Interfaces Gráficas e Tratamento de Exceções
 
