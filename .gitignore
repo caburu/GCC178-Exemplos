@@ -1,14 +1,3 @@
-/Polimorfismo - Veiculos v1/build/
-/Polimorfismo - Veiculos v1/nbproject/private/
-/Exemplo_JDBC_SQLite/nbproject/private/
-/Exemplo_JDBC_SQLite/build/
-/ProjetoTemCafe/nbproject/private/
-/ProjetoTemCafe/build/
-/FabricaAutomoveis/nbproject/private/
-/FabricaAutomoveis/build/
-/MonitoresTemperatura/nbproject/private/
-/MonitoresTemperatura/build/
-/ExemploJFreeChart/nbproject/private/
-/ExemploJFreeChart/build/
-/ThreadsCorredores/nbproject/private/
-/ThreadsCorredores/build/
+*/nbproject/private/
+*/build/
+*/dist/
