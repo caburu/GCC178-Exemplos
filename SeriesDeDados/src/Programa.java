@@ -1,5 +1,6 @@
 
 import Clima.ControladorDadosClima;
+import Cotacao.ControladorSeriesCotacoes;
 import SeriesDiarias.VisualizadorSeries;
 import SeriesDiarias.ControladorSeries;
 import SeriesDiarias.SerieDadosDiarios;
@@ -22,9 +23,10 @@ public class Programa {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        ControladorSeries controladorClima = new ControladorDadosClima();
         
-        List<SerieDadosDiarios> series = controladorClima.obterSeriesDados();
+        ControladorSeries controlador = new ControladorSeriesCotacoes();
+        
+        List<SerieDadosDiarios> series = controlador.obterSeriesDados();
         
         for (SerieDadosDiarios serie : series) {
             System.out.println(serie.obterIdentificacaoSerie());

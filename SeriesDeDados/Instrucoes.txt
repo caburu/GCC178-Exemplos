@@ -14,9 +14,23 @@ Exercício 2: Crie uma classe que implementa a interface SeriesDadosDiarios.
 
 O método obterIdentificacao série não deverá ser sobrescrito nessa classe.
 
+Ela deverá ter também uma localidade
+
+Ela deverá receber no construtor a localidade, o dia inicial e o dia final. No
+construtor deve ser criada a estrutura de dados que guardará os dados da série.
+
+Ela deverá ter um método para adicionar um dado para um determinado dia.
+
 Exercício 3: Crie duas subclasses para a classe que você criou no exercício 2
 
-Sobrescreva o método obterIdentificacaoSerie
+As subclasses representarão tipos de coisas diferentes da sua série de dados
+
+Ela deve sobrescrever o método getIdentificação para retornar que tipo de dado
+ela guarda junto com a localidade:
+
+Exemplo: "Dados de temperatura de Lavras"
+
+Obs: ela não precisa ter nenhum atributo.
 
 Exercício 4: Crie uma classe Controladora dos seus dados que implementa a interface
 ControladorSeries
