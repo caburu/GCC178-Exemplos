@@ -6,51 +6,98 @@ Em caso de dúvidas, verifique os slides "GCC178 - Parte 08 - Classes Abstratas 
 
 ======================= ATIVIDADES ============================================
 
-Exercício 1: Crie um pacote
+As atividades de hoje têm por objetivo exemplificar a importância do uso dos
+conceitos de Classes Abstratas e Interfaces.
+
+O projeto-base que vocês estão usando tem um pacote chamado "SeriesDiarias" com
+duas interfaces e uma classe.
+
+Uma "Série de Dados Diários" é um conjunto de dados que tem um dia inicial e um
+dia final e um valor inteiro correspondente para cada dia.
+
+Exemplos: 
+- Temperaturas de uma cidade, do dia 1 ao dia 5.
+- Vendas de uma loja, do dia 4 ao dia 10.
+- Acidentes de uma rodovia, do dia 9 ao dia 18.
+
+As interfaces fornecidas são genéricas e servem para qualquer tipo de série de
+dados diários. A ideia é que você trate algum tipo de série de dados usando
+essas interfaces.
+
+Converse com o professor para definir qual das séries abaixo você vai implementar
+1) Dados de clima: temperatura e umidade relativa do ar.
+2) Dados de acidentes: fatais e não fatais
+3) Dados da balança comercial de um país: importações e exportações.
+4) Dados de refeições de um restaurante: almoço e jantar
+5) Dados de presença dos alunos nas aulas: aula teórica e prática.
+
+Obs: você pode sugerir também outras séries para o professor.
+
+Exercício 1:
+
+Crie um pacote para colocar as classes da sua série de dados.
+Obs: para facilitar o entendimento as questões citarão séries de dados de clima.
+Lembre-se de adaptar para o seu tema escolhido.
 
 As classes dos exercícios 2, 3 e 4 devem pertencer a esse pacote.
 
-Exercício 2: Crie uma classe que implementa a interface SeriesDadosDiarios.
+Exercício 2:
 
-O método obterIdentificacao série não deverá ser sobrescrito nessa classe.
+Crie uma classe para representar a sua série de dados.
 
-Ela deverá ter também uma localidade
+No caso dos dados de clima, por exemplo, poderia chamar SerieDadosClima. A ideia
+é que ela tenha depois subclasses para representar os dois tipos diferentes de 
+dados de clima (temperatura e umidade relativa do ar).
+
+A classe deverá implementar a interface fornecida SeriesDadosDiarios.
+
+Ela deverá sobrescrever todos os métodos da interface, exceto o método 
+obterIdentificacaoSerie.
+
+Ela deverá ter um atributo localidade para identificar a que local se refere. No
+caso dos dados de clima, por exemplo, poderia ser uma cidade.
 
 Ela deverá receber no construtor a localidade, o dia inicial e o dia final. No
 construtor deve ser criada a estrutura de dados que guardará os dados da série.
 
-Ela deverá ter um método para adicionar um dado para um determinado dia.
+Por fim, ela deverá ter um método para adicionar um dado para um determinado dia.
 
-Exercício 3: Crie duas subclasses para a classe que você criou no exercício 2
+Exercício 3:
 
-As subclasses representarão tipos de coisas diferentes da sua série de dados
+Crie duas subclasses para a classe que você criou no exercício 2. As subclasses
+representarão tipos de dados diferentes da sua série de dados.
 
-Ela deve sobrescrever o método getIdentificação para retornar que tipo de dado
-ela guarda junto com a localidade:
+Por exemplo, no caso de dados de clima, uma classe será para dados de temperatura
+e outra para dados de umidade.
 
-Exemplo: "Dados de temperatura de Lavras"
+A classe deve sobrescrever o método getIdentificação para retornar que tipo de dado
+ela guarda e acrescentar também a localidade:
+Exemplo: "Dados de Temperatura - Lavras"
 
 Obs: ela não precisa ter nenhum atributo.
 
-Exercício 4: Crie uma classe Controladora dos seus dados que implementa a interface
-ControladorSeries
+Exercício 4:
 
-A classe deve ter uma lista com pelo menos uma série de cada tipo que você criou
+Crie uma classe Controladora que implementa a interface fornecida ControladorSeries.
 
-Deve implementar o método da interface ControladorSeries
+A classe deve ter uma lista com pelo menos dois objetos, um de cada classe que
+você criou no Exercício 3.
 
-Deve, no construtor, criar "na mão" os dados das suas séries.
+Ela deve implementar o método da interface ControladorSeries.
+
+Por fim, no construtor, ela deverá criar "na mão" os dados das suas séries.
 
 Obs: num programa normal poderíamos ter um menu para o usuário informar os dados.
 Ou obter essa informação de um arquivo.
 
-Exercício 5: Crie uma classe principal
+Exercício 5:
 
-Crie fora do pacote que você havia criado no Exercício 1.
+Crie uma classe principal fora do pacote que você havia criado no Exercício 1.
 
 Ela deve instanciar a classe controladora.
 
-Deve obter a lista de séries usando como tipo estático List<SerieDadosDiarios>
+Deve obter a lista de séries guardando em uma variável com o tipo estático 
+List<SerieDadosDiarios>.
 
 Para testar o funcionamento, deve ter um loop que mostre os dados das séries
 no seguinte formato:
@@ -65,15 +112,23 @@ Dia 1: 0
 Dia 2: 5
 ...
 
-Exercício 6: Exibição dos dados das séries
+Exercício 6:
 
 Acrescente na sua classe principal um loop da lista de séries. Para cada série
-crie um objeto da classe VisualizadorSeries, passando a série por parâmetro; e,
-em seguida, chame o método exibir do visualizador.
+crie um objeto da classe fornecida VisualizadorSeries, passando a série por 
+parâmetro; e, em seguida, chame o método exibir do visualizador.
 
 Teste seu programa.
 
-Exercício 7: Sistema integrado de séries
+Pontos a refletir sobre os conceitos:
+- Quando a classe de VisualizadorSeries foi implementada ela conhecia algum
+  código que você desenvolveu?
+- Por que então ela conseguiu mostrar os dados da suas séries mesmo sem ter
+  nenhuma noção da implementação?
+- O que o polimorfismo tem a ver com o que foi feito?
+- Para que então servem as interfaces (como tipo de dado)?
+
+Exercício 7:
 
 Envie para seu professor o pacote do exercício 1.
 
