@@ -22,6 +22,8 @@ public abstract class DadosClima implements SerieDadosDiarios {
     
     public DadosClima(String cidade, int diaInicial, int diaFinal) {
         this.cidade = cidade;
+        this.diaInicial = diaInicial;
+        this.diaFinal = diaFinal;
         dados = new HashMap<>();
         
         for (int i = diaInicial; i <= diaFinal; i++) {

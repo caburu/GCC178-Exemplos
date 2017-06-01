@@ -8,8 +8,8 @@ package SeriesDiarias;
 
 /**
  * Interface para definir o que uma Série de Dados Diários deve ter.
- * Uma série de dados diários é um conjunto de dados que tem valor correspondente
- * para cada dia. Os dados são aqui valores inteiros.
+ * Uma série de dados diários tem um dia inicial e um dia final e valores inteiros
+ * correspondentes para cada dia.
  * 
  * Por questão de simplicidade os dias são representados por números inteiros.
  * Assim podemos ter dados, por exemplo, do dia 5 ao dia 30.

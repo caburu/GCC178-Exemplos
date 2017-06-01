@@ -1,0 +1,66 @@
+======================= OBSERVAÇÕES GERAIS ====================================
+
+Essa é a sequência de atividades para a aula prática de "Classes Abstratas e Interfaces"
+
+Em caso de dúvidas, verifique os slides "GCC178 - Parte 08 - Classes Abstratas e Interfaces"
+
+======================= ATIVIDADES ============================================
+
+Exercício 1: Crie um pacote
+
+As classes dos exercícios 2, 3 e 4 devem pertencer a esse pacote.
+
+Exercício 2: Crie uma classe que implementa a interface SeriesDadosDiarios.
+
+O método obterIdentificacao série não deverá ser sobrescrito nessa classe.
+
+Exercício 3: Crie duas subclasses para a classe que você criou no exercício 2
+
+Sobrescreva o método obterIdentificacaoSerie
+
+Exercício 4: Crie uma classe Controladora dos seus dados que implementa a interface
+ControladorSeries
+
+A classe deve ter uma lista com pelo menos uma série de cada tipo que você criou
+
+Deve implementar o método da interface ControladorSeries
+
+Deve, no construtor, criar "na mão" os dados das suas séries.
+
+Obs: num programa normal poderíamos ter um menu para o usuário informar os dados.
+Ou obter essa informação de um arquivo.
+
+Exercício 5: Crie uma classe principal
+
+Crie fora do pacote que você havia criado no Exercício 1.
+
+Ela deve instanciar a classe controladora.
+
+Deve obter a lista de séries usando como tipo estático List<SerieDadosDiarios>
+
+Para testar o funcionamento, deve ter um loop que mostre os dados das séries
+no seguinte formato:
+
+Dados da Serie X
+Dia 1: 10
+Dia 2: 20
+...
+
+Dados da Serie Y
+Dia 1: 0
+Dia 2: 5
+...
+
+Exercício 6: Exibição dos dados das séries
+
+Acrescente na sua classe principal um loop da lista de séries. Para cada série
+crie um objeto da classe VisualizadorSeries, passando a série por parâmetro; e,
+em seguida, chame o método exibir do visualizador.
+
+Teste seu programa.
+
+Exercício 7: Sistema integrado de séries
+
+Envie para seu professor o pacote do exercício 1.
+
+A ideia é que ele junte os pacotes de todos os alunos em um único programa.
