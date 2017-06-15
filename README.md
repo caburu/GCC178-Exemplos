@@ -42,11 +42,19 @@ Obs: essa é uma tradução de um projeto do [Livro do Barnes e Kolling]
 [World of Zuul v1]: /World%20of%20Zuul%20v1
 [Livro do Barnes e Kolling]: https://www.bluej.org/objects-first/
 
+### Herança
+
+* Projeto [Editor Gráfico - Herança].
+
+[Editor Gráfico - Herança]: /EditorGraficoHeranca
+
 ### Interfaces Gráficas e Tratamento de Exceções
 
 * Projeto [GUI-RedeSocial-v1]
+* Projeto [Editor Gráfico - GUI].
 
 [GUI-RedeSocial-v1]: /GUI-RedeSocial-v1
+[Editor Gráfico - GUI]: /EditorGraficoGUI
 
 ### Padrões de Projeto
 
