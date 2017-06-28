@@ -14,13 +14,13 @@ import java.util.*;
  */
 public class FeedNoticias {
     // lista de mensagens publicadas no Feed
-    private ArrayList<Mensagem> mensagens;
+    private List<Mensagem> mensagens;
 
     /**
      * Cria o Feed de Noticias (apenas inicializa a lista de mensagens)
      */
     public FeedNoticias() {
-        mensagens = new ArrayList<Mensagem>();
+        mensagens = new ArrayList<>();
     }
 
     /**
@@ -52,7 +52,7 @@ public class FeedNoticias {
     /**
      * Metodo de obtenção do conteúdo do Feed de Noticiais. Percorre a lista de 
      * mensagens e monta uma string com os textos de exibição de cada mensagem.
-     * IMPORTANTE: geralmente não se retorna texto formato para usar interfaces
+     * IMPORTANTE: geralmente não se retorna texto formatado para usar interfaces
      *             gráficas. São retornados os próprios objetos.
      * 
      * @return O conteúdo do feed

@@ -52,6 +52,13 @@ public abstract class Mensagem
     }    
     
     /**
+     * Retorna o autor da mensagem
+     */
+    public String getAutor() {
+        return autor;
+    }
+    
+    /**
      * Realiza a ação de curtir uma mensagem. Na pratica apenas conta mais
      * uma curtida.
      */

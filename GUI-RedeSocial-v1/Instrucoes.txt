@@ -5,18 +5,102 @@ Exceções.
 
 Você vai precisar desse projeto e dos slides "Parte 11b - GUI e Tratamento de Exceções"
 
-ATIVIDADES
+ATIVIDADES - Interfaces Gráficas
 
-Exercício 1:
+Exercício 1.1: Comentários
 
 O botão "Comentar" não está fazendo nada. Faça as implementações necessárias para
 que ele passe a funcionar (veja o botão "Curtir" como um exemplo).
 
-Exercício 2:
+Exercício 1.2: Atualização
 
 Acrescente um botão "Atualizar" que atualiza o Feed de Notícias.
 
-Exercício 3:
+Exercício 1.3: Rolagem do Feed de Notícias
+
+O Feed de Notícias da Rede Social tem tamanho fixo. Se as mensagens não couberem
+na tela, elas simplesmente não aparecem. Vamos melhorar isso colocando o 
+componente que mostra o feed de notícias em um JScrollPane (um painel que mostra
+barras de rolagem quando necessário).
+
+Para fazer isso, basta criar um JScrollPane passando o componente como parâmetro
+do construtor. E então adicionar o JScrollPane na janela (ao invés do componente).
+
+Teste sua implementação.
+
+Exercício 1.4: Fonte do Feed de Notícias
+
+Que tal mudarmos a fonte do nosso Feed de Notícias?
+
+Um JTextArea tem um método chamado setFont que muda a fonte utilizada. Ele
+espera um objeto da classe Font que pode ser criado passando-se o nome da fonte,
+um estilo e o tamanho da fonte (ex: new Font("Serif", Font.ITALIC, 16)).
+
+Teste sua implementação.
+
+Exercício 1.5:
+
+Nossa Rede Social mostra no Feed de Notícias as mensagens de todos os autores. 
+Suponha que precisemos de uma forma para encontrar mais facilmente as mensagens
+de um determinado autor. Podemos, por exemplo, criar uma caixa de seleção para
+selecionar um autor e o Feed de Notícias mostrar apenas as mensagens daquele 
+autor. Para fazermos isso, vamos seguir os passos abaixo:
+
+a) Altere a classe Feed de Notícias para que ela tenha uma lista com os autores
+das mensagens. Toda vez que uma nova mensagem for adicionada, se o autor ainda
+não está na lista, ele é incluído. Crie também um método para retornar a lista
+com todos os autores. Faça as alterações necessárias e teste o programa.
+
+b) Crie um novo método na classe Feed de Notícias, similar ao getConteudo, mas 
+que recebe um autor e retorna  apenas as mensagens dele . Teste sua implementação.
+
+c) Vamos agora acrescentar à nossa tela uma caixa para o usuário selecionar o
+autor das mensagens que ele quer ver. Uma caixa de  seleção é um objeto da classe
+JComboBox, que tem uma lista de objetos (cada objeto será uma opção na caixa de 
+seleção). Vamos então:
+- Criar a caixa de seleção.
+- Colocar a caixa de seleção dentro de um painel que esteja na área Norte (NORTH)
+do BorderLayout.
+- Criar um método que esvazia e preenche a caixa de seleção com os autores. Para
+isso, use os métodos da classe JComboBox: removeAllItems e addItem. Você deve
+sempre adicionar primeiro a string "Todos" e depois cada um dos autores retornados
+pelo feed de Notíciais. O método criado deve ser chamado tanto após a criação
+da caixa de seleção, como também toda vez que uma mensagem for postada.
+- Tratar o evento de clique da caixa de seleção da mesma forma que fazemos para
+os botões e atualizar o feed de notícias de acordo com o autor escolhido (dica: 
+a classe JComboBox tem o método getSelectedItem que retorna o item selecionado).
+
+Teste suas implementações.
+
+Exercício 1.6: Menus
+
+Vamos criar um menu com as opções: Postar Mensagem, Curtir, Comentar e Sair. 
+Crie os menus e trate os eventos conforme necessário.
+
+Dica: use os slides da aula de Interfaces Gráficas para ver exemplos de criação dos
+menus.
+
+Teste sua implementação.
+
+Exercício 1.7: Clique de Mouse e Menu Popup
+
+Vamos agora fazer com que um menu popup apareça quando clicamos na área de texto
+do feed de notíciais. Para isso você precisará tratar os eventos de mouse da
+área de texto (use addMouseListener). No evento de clique do mouse você exibirá
+um menu popup criado conforme descrição abaixo.
+
+O menu popup (classe JPopupMenu) funciona como um menu normal, ou seja, ele é
+formato por objetos do tipo JMenuItem. Nosso menu popup deverá ter os ítems de
+menu: Atualizar e Limpar. O primeiro atualiza o feed (como o botão do exercício
+1.2), já o segundo deve limpar o feed de notíciais.
+
+Obs: a classe JPopupMenu possui um método show que espera um componente e a
+posição x, y onde o menu deve aparecer (obtenha essas informações do objeto
+MouseEvent, que vem por parâmetro no tratamento do clique do mouse).
+
+ATIVIDADES - Tratamentos de Exceção
+
+Exercício 2.1:
 
 O botão "Curtir" e o botão "Comentar" pedem para o usuário o identificador da
 mensagem. Mas se o usuário passar um identificador de uma mensagem que não existe
@@ -27,12 +111,12 @@ O método no Feed de Notícias poderia alterar seu tipo de retorno, por exemplo?
 -> Veja os slides sobre Tratamento de Exceções até o slide 13 para implementar
 a resposta.
 
-Exercício 4:
+Exercício 2.2:
 
 -> Veja no slide 14 que essa solução não é completa.
 -> Veja até o slide 20 o funcionamento do lançamento e captura de exceções.
 
-4.1)
+a)
 Altere então o método que trata as curtidas no Feed de Notícias para que ele
 lance uma exceção caso o identificador da mensagem não exista (use exceção do
 tipo RuntimeException).
@@ -40,12 +124,12 @@ tipo RuntimeException).
 Teste sua aplicação sem ainda tratar a exceção. Veja que o erro que aparece é 
 da mensagem que você gerou.
 
-4.2)
+b)
 Agora faça o tratamento de exceção na classe da Tela. Por enquanto, apenas exiba
 a mensagem de erro para o usuário (você pode usar a classe JOptionPane para 
 exibir uma mensagem).
 
-Exercício 5:
+Exercício 2.3:
 
 -> Veja nos slides 22 a 26 que o ideal é nos recuperarmos de uma exceção.
 
@@ -55,12 +139,12 @@ usuário que informasse o identificador da mensagem novamente, certo?
 Altere então o código de forma que o programa continue pedindo o identificador
 para o usuário até ele digitar um identificador válido.
 
-Exercício 6:
+Exercício 2.4:
 
 Depois da alteração anterior, o que acontece com seu programa caso não exista
 nenhuma mensagem? Caso não tenha tratado isso, faça o tratamento agora.
 
-Exercício 7:
+Exercício 2.5:
 
 Do jeito que fizemos até agora está sendo retornada apenas uma mensagem de erro.
 Mas pode ser que queiramos exibir uma mensagem mais amigável para o usuário.
@@ -79,7 +163,7 @@ Faça com que seja lançada uma exceção dessa classe. Altere a classe da Tela 
 que capture uma exceção desse tipo e defina sua própria mensagem para o usuário
 buscando o id da mensagem a partir do objeto da exceção.
 
-Exercício 8:
+Exercício 2.6:
 
 Repare que quando lançamos uma exceção não quer dizer necessariamente que quem
 usar nosso método vai tratá-la. Em alguns casos, podemos forçar que quem use
@@ -92,12 +176,12 @@ exceção verificada e compile o projeto pra ver o que acontece.
 
 Faça agora então os devidos tratamentos.
 
-Exercício 9:
+Exercício 2.7:
 
 -> Veja nos slides 36 e 37 que podemos tratar exceções diferentes no bloco
 catch.
 
-9.1)
+a)
 Altere o tratamento da exceção na classe de Tela para que o que fizemos o
 tratamento funcione apenas caso seja uma exceção do tipo que lançamos. Acrescente
 um tratamento genérico (Exception) que apenas mostra a mensagem de erro para
@@ -106,7 +190,7 @@ os demais casos.
 Execute o programa para confirmar que do ponto de vista do 
 usuário nada mudou (teste com identificadores válidos e inválidos).
 
-9.2)
+b)
 Apenas como forma de testar nossa última alteração, acrescente dentro do método
 Curtir da classe Mensagem uma divisão por zero qualquer. Isso terá um efeito de
 provocar uma exceção que não é do tipo MensagemNaoEncontradaException. Dessa
