@@ -1,0 +1,25 @@
+OBSERVAÇÕES GERAIS
+
+Esse arquivo descreve o funcionamento do projeto, apresentado como exemplo na
+aula de Pacotes e Frameworks.
+
+Você vai precisar desse projeto e dos slides "GCC178 - Parte 13 - Pacotes e Frameworks"
+
+O PROJETO
+
+- A classe LeitorArquivo representa a tarefa a ser executada.
+  . A tarefa executada é mostrar em um JOptionPane a primeira linha do arquivo
+    'teste.txt'
+- A classe AulaQuartz cria o agendador e agenda a tarefa.
+
+USO DO PROJETO
+
+Para usar o projeto você deve deve existir um arquivo chamado 'testes.txt. A
+primeira linha do arquivo será exibida de tempos em tempos (a cada X segundos).
+
+Para testar o projeto abra o arquivo em um editor de texto e, de vez em quando,
+altere o conteúdo do arquivo e o salve.
+
+Obs: não foi implementada uma forma de parar o programa :) Mate a aplicação ao
+terminar.
+
