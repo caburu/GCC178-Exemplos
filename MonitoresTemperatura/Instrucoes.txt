@@ -3,7 +3,7 @@
 
 Essa é a sequência de atividades para a aula prática de "Padrões de Projeto - Parte 2"
 
-Você vai precisar desse projeto e dos slides "Parte 16 - Padrões de Projeto - Parte 2"
+Você vai precisar desse projeto e dos slides "Parte 15 - Padrões de Projeto - Parte 2"
 
 ================ ATIVIDADES ============================================
 
@@ -14,7 +14,7 @@ O programa MonitoresTemperatura mostra a tentativa do Tião de criar uma API
 programas que usem os dados de temperaturas de algumas cidades.
 
 Tião criou também uma tela de exemplo (pacote telaExemplo) para demonstrar o uso
-de sua API e servir de código de exemplo para seus clientes.
+de sua API e servir de código de referência para seus clientes.
 
 Execute a aplicação e veja como ela funciona (aguarde alguns segundos).
 
@@ -81,7 +81,7 @@ cliente deseja uma tela que mostre:
                 28 ºC (* a temperatura em uma fonte bem grande)
 
 Ou seja, a tela tem uma caixa de texto para o usuário digitar o nome da cidade e
-ao clicar no botão "Monitorar" a temperatura da cidad escolhida deve passar a 
+ao clicar no botão "Monitorar" a temperatura da cidade escolhida deve passar a 
 ser atualizada automaticamente.
 
 Obs: faça o exercício sem alterar a API do Tião (caso precise alterá-la algo
