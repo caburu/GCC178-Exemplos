@@ -6,7 +6,8 @@
 package fabricaautomoveis.carros;
 
 /**
- *
+ * Classe abstrata base para os carros vendidos pelas concessionárias
+ * 
  * @author julio
  */
 public abstract class Carro {

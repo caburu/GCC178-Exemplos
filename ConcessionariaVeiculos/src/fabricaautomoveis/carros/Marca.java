@@ -6,7 +6,8 @@
 package fabricaautomoveis.carros;
 
 /**
- *
+ * Enumerador para representar as possíveis marcas de carro.
+ * 
  * @author julio
  */
 public enum Marca {

@@ -23,7 +23,7 @@ Exercício 2:
 No exercício anterior vimos que a classe Concessionaria não tem os carros de 
 todas as categorias para a Marca VW.
 
-Faça as alteraçeõs necessárias para que a Concessionaria consiga entregar modelos
+Faça as alterações necessárias para que a Concessionaria consiga entregar modelos
 de Saveiro (Pickup da VW). Por enquanto não trate os carros de luxo.
 
 O que você achou das mudanças no código?
@@ -47,8 +47,8 @@ ainda mais modificações na classe Concessionária.
 
 Na aula teórica vimos que o Padrão de Projeto Abstract Factory é muito útil nessas
 situações. Com ele nós poderemos criar carros de tipos diferentes (inclusive de
-marcas diferentes) sem precisarmos ficar alterando o código da Classe Concessionária
-a cada novo modelo de Carro.
+marcas diferentes) sem precisarmos ficar alterando o código da classe Concessionária
+a cada novo modelo de carro.
 
 Faça então a modelagem UML das alterações necessárias para implementar o Abstract
 Factory. Considere duas fábricas concretas: VW e Fiat.

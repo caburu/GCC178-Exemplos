@@ -6,7 +6,8 @@
 package fabricaautomoveis.carros;
 
 /**
- *
+ * Enumerador para representar as possíveis categorias de carros
+ * 
  * @author julio
  */
 public enum Categoria {
