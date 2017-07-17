@@ -4,6 +4,8 @@
  */
 package adapter;
 
+import outroProjeto.DiscenteDeOutroProjeto;
+
 /**
  *
  * @author Paulo
